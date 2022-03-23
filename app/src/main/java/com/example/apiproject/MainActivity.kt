@@ -19,20 +19,16 @@ class MainActivity : AppCompatActivity() {
         val randomFactCall = randomFactAPI.getRandomFact()
         val dailyFactCall = randomFactAPI.getTodayFact()
 
-        val randomFoxAPI = RetrofitHelperFox.getInstance().create(FactService::class.java)
-        val randomFoxDailyCall = randomFoxAPI.getFox()
-        val randomFoxUnlimitedCall = randomFoxAPI.getFoxUnlimited()
-
         binding.textViewMainDaily.text = randomFactCall
         binding.textViewMainRandom.text = dailyFactCall
 
-        Picasso.get().load("https://i.imgur.com/DvpvklR.png").into(imageView);
+        Picasso.get().load("https://randomfox.ca/floof/").into(binding.imageViewMainDaily);
 
 
         binding.buttonMainNew.setOnClickListener {
             binding.textViewMainRandom.text = randomFactCall
-            binding.imageViewMainUnlimited.Pic
-            binding.imageViewMainDaily.load(randomFoxDailyCall)
+            Picasso.get().load("https://randomfox.ca/floof/").into(binding.imageViewMainDaily)
+            Picasso.get().load("https://randomfox.ca/floof/").into(binding.imageViewMainUnlimited)
         }
     }
 }
