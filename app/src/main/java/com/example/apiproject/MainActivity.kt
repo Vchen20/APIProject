@@ -23,6 +23,7 @@ class MainActivity : AppCompatActivity() {
         binding.textViewMainRandom.text = dailyFactCall
 
         Picasso.get().load("https://randomfox.ca/floof/").into(binding.imageViewMainDaily);
+        Picasso.get().load("https://randomfox.ca/floof/").into(binding.imageViewMainUnlimited);
 
 
         binding.buttonMainNew.setOnClickListener {
